@@ -2,6 +2,8 @@
 /**
  * main - Entry point
  *
+ * Description: A C program that use preintf
+ *
  * Return: Always 0 (Success)
 */
 int main(void)
