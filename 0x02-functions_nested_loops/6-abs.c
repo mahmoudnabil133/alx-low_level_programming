@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
  * _abs - gets the absolute of the passed number
