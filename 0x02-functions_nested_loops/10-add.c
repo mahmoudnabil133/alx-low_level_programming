@@ -6,7 +6,7 @@
  * Return: the sum of these int.
  */
 
-int add(int n, m)
+int add(int n, int m)
 {
 	return (n + m);
 }
