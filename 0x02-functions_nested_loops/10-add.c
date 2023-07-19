@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 /**
  * add - adds 2 intigers
  * @n: first int will be added
