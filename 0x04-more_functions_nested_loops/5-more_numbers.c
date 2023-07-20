@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 /**
  * more_numbers - print from 1 2 14 19 time
  */
