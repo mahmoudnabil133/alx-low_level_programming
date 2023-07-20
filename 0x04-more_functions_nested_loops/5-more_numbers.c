@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * more_numbers - print from 1 2 14 19 time
+ * more_numbers - print from 1 to 14 19 time
  */
 void more_numbers(void)
 {int i, j;
