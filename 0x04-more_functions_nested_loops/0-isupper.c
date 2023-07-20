@@ -4,7 +4,7 @@
  * @c: the char will b checked
  * Return: 0if lower 1 if upper
  */
-int _isupper(char c)
+int _isupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (0);
