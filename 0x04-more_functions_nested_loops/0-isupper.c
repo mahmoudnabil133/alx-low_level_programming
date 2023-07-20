@@ -4,10 +4,10 @@
  * @n: the char will b checked
  * Return: 0if lower 1 if upper
  */
-int _isupper(int c)
+int _isupper(char c)
 {
-	if (c > 96 && c <123)
-		return (1);
-	else
+	if (c >= a && c <= z)
 		return (0);
-
+	else
+		return (1);
+}
