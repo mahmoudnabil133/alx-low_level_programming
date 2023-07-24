@@ -7,7 +7,7 @@ void _puts(char *str)
 {int i;
 	for (i = 0; ; i++)
 	{
-		if (str[i] == '\n')
+		if (str[i] == '\0')
 			break;
 		_putchar(str[i]);
 	}
