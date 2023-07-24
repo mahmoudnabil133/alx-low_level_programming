@@ -4,6 +4,12 @@
  * @str: the string will be printed
  */
 void _puts(char *str)
-{
-	puts(str, "\n");
+{int i;
+	for (i = 0; ; i++)
+	{
+		if (str[i] == '\n')
+			break;
+		_putchar(str[i]);
+	}
+	_putchar('\n);
 }
