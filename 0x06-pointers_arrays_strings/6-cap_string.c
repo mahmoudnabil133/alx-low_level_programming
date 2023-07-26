@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * string_toupper - convert from lower to upper
- * @s: the string will be uppered
- * Return: the uppercase string
+ * cap_string - cap the string
+ * @s: the string will be capped
+ * Return: the capped
  */
-char *string_toupper(char *s)
+char *cap_string(char *s)
 {int i;
 i = 0;
 while (s[i] != '\0')
