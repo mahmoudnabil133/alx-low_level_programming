@@ -4,7 +4,7 @@
  * @n: the number will be printed
  */
 void print_number(int n)
-{int a;
+{
 	if (n < 0)
 	{
 		n = -1 * n;
