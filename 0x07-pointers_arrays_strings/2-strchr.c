@@ -2,6 +2,7 @@
 #include <string.h>
 /**
  * _strchr - return a pointer to the first occurance of string
+ * @s : original string
  * @c: the character will be passed to the function
  * Return: string from the first char c in the string
  */
