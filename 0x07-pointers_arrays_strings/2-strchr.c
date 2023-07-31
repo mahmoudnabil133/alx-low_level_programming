@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * _strchr - return a pointer to the first occurance of string
  * @c: the character will be passed to the function
