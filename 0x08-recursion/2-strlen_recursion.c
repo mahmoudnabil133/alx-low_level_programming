@@ -1,4 +1,4 @@
-#incldue "main.h"
+#include "main.h"
 /**
  * _strlen_recursion - clculate the strln
  * @s: the str will be calculated
@@ -9,7 +9,7 @@ int _strlen_recursion(char *s)
 	if (*s)
 	{
 		len++;
-		len += _strlen_recursion(s + 1);
+		_strlen_recursion(s + 1);
 	}
 	return (len);
 }
