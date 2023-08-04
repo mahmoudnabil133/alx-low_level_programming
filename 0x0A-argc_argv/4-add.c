@@ -14,21 +14,20 @@ int main(int argc, char *argv[])
 		{
 			sum += atoi(argv[cnt]);
 			if (atoi(argv[cnt]) == 0)
-					x = 1;
-					}
+				x = 1;
+		}
 		if (x == 0)
+			printf("%d\n", sum);
+		else
 		{
-		printf("%d\n", sum);
+			printf("Error\n");
+			return (1);
 		}
 	}
 	else
 	{
-	printf("%d\n", 0);
-	}
-	if (x == 1)
-	{
-		printf("Error\n");
-		return (1);
+		sum = 0;
+		printf("%d\n", sum);
 	}
 	return (0);
 }
