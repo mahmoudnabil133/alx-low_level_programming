@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {int cnt, mul = 1;
-	if (argc > 1)
+	if (argc > 2)
 	{
 		for (cnt = 1; cnt < argc; cnt++)
 			mul *= atoi(argv[cnt]);
