@@ -6,11 +6,10 @@
  * Return: a pntr
  */
 char *_strdup(char *str)
-{int n;
+{int n, i;
 	char *str2;
 	n = strlen(str);
-	str2 = malloc(n * sizeof(char));
-	int i;
+	str2 = malloc(n * sizeof(char));	
 	i = 0;
 	while (i < n)
 	{str2[i] = str[i];
