@@ -23,7 +23,7 @@ char *str_concat(char *s1, char *s2)
 		s3[i] = s2[i - n1];
 		i++;
 	}
-	s3[sum] ='\0';
+	s3[sum - 1] ='\0';
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
 	else
