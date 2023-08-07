@@ -8,10 +8,10 @@
  */
 char *str_concat(char *s1, char *s2)
 {int n1, n2, i = 0, sum;
+	char *s3;
 	n1 = strlen(s1);
 	n2 = strlen(s2);
 	sum = n1 + n2 + 1;
-	char *s3;
 	s3 = malloc(sum * sizeof(char));
 	while (i < n1)
 	{
@@ -25,7 +25,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	s3[sum] ='\0';
 	if (s1 == NULL || s2 == NULL)
-		return (NULl);
+		return (NULL);
 	else
 		return (s3);
 }
