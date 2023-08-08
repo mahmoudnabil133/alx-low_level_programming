@@ -1,23 +1,31 @@
+
+#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
-#include <string.h>
 /**
- * _strdup - it dubils a string
- * @str: pointer will be dubeled
- * Return: a pntr
+ * _strdup - duplicate to new memory space location
+ * @str: char
+ * Return: 0
  */
 char *_strdup(char *str)
-{int n, i;
-	char *str2;
-	n = strlen(str) + 1;
-	str2 = malloc(n * sizeof(char));	
-	i = 0;
-	while (i < n - 1)
-	{str2[i] = str[i];
-		i++;
-	}
-	str2[i] = '\0';
+{
+	char *aaa;
+	int i, r = 0;
+
 	if (str == NULL)
 		return (NULL);
-	else
-		return (str2);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+
+	aaa = malloc(sizeof(char) * (i + 1));
+
+	if (aaa == NULL)
+		return (NULL);
+
+	for (r = 0; str[r]; r++)
+		aaa[r] = str[r];
+
+	return (aaa);
 }
+
