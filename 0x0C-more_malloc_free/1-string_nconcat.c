@@ -12,10 +12,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	len1 = strlen(s1);
 	len2 = strlen(s2);
-	if (s1 == NULL)
-		len1 = 0;
-	if (s2 == NULL)
-		len2 = 0;
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	if (n >= len2)
 		n = len2;
 	sum = len1 + n + 1;
