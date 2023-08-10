@@ -12,6 +12,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	len1 = strlen(s1);
 	len2 = strlen(s2);
+	if (s1 == NULL)
+		len1 = 0;
+	if (s2 == NULL)
+		len2 = 0;
 	if (n >= len2)
 		n = len2;
 	sum = len1 + n + 1;
@@ -21,7 +25,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; i < n; i++)
 		c[i + len1] = s2[i];
 	c[sum - 1] = '\0';
-	if (c == NULL || s1 == NULL || s2 == NULL || n == 0)
+	if (c == NULL)
 		return (NULL);
 	return (c);
 }
