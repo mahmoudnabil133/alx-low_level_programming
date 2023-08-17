@@ -9,12 +9,13 @@ void print_all(const char * const format, ...)
 	char *s, *sep = "";
 	va_list ap;
 
+	va_start(ap, format);
 	if (format == NULL)
 	{
 		printf("\n");
+		va_end(ap);
 		return;
 	}
-	va_start(ap, format);
 	while (format[i])
 	{
 		switch (format[i])
