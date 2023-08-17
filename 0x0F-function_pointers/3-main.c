@@ -5,22 +5,29 @@
  * @argv: argv
  * Return: return an int
  */
-int main(int argc, int *argv)
-{
-	if (argc != 3)
+int main(int argc, char **argv)
+{int a, b, res;
+	char *op;
+
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	int a, b, res;
 	a = atoi(argv[1]);
-	b = argv(argv[3]);
-	res = get_op_func(argv[2])(a, b);
-	if (res == -1)
+	op = argv[2];
+	b = atoi(argv[3]);
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
+	if ((*op == '/' || *op == '%') && b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	res = get_op_func(op)(a, b);
 	printf("%d\n", res);
 	return (0);
 }
