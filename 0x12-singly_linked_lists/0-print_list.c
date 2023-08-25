@@ -6,20 +6,15 @@
 */
 size_t print_list(const list_t *h)
 {size_t sum = 0;
-	list_t *iterator = h;
 
-	while (iterator)
+	while (h)
 	{
-		if (iterator->str == NULL)
-		{
-			printf("%s", "[0] (nil)");
-			sum++;
-			iterator = iterator->next;
-			continue;
-		}
-		printf("[%u] %s\n", iterator->len, iterator->str);
+		if (h->str == NULL)
+			printf("%s\n", "[0] (nil)");
+		else
+			printf("[%u] %s\n", h->len, h->str);
 		sum++;
-		iterator = iterator->next;
+		h = h->next;
 	}
 	return (sum);
 }
