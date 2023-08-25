@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /**
  * print_list - it prints a list
  * @h: struct pointer to head of the list.
