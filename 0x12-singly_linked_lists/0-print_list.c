@@ -5,7 +5,7 @@
  * Return: num of elements.
 */
 size_t print_list(const list_t *h)
-{int sum = 0;
+{size_t sum = 0;
 	list_t *iterator = h;
 
 	while (iterator)
