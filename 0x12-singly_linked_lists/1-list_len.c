@@ -6,12 +6,12 @@
 */
 size_t list_len(const list_t *h)
 {size_t sum = 0;
-	list_t *iterator = h;
 
-	while (iterator != NULL)
+	while (h != NULL)
 	{
 		sum++;
-		iterator = iterator->next;
+		h = h->next;
 	}
 	return (sum);
 }
+
