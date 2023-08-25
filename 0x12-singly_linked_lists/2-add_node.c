@@ -6,18 +6,16 @@
  * Return: head ptr.
 */
 list_t *add_node(list_t **head, const char *str)
-{unsigned int len;
+{unsigned int len1;
 	list_t *new_node;
 
-	len = strlen(str);
+	len1 = strlen(str);
 	new_node = malloc(sizeof(list_t));
 	if (!new_node)
 		return (NULL);
 	new_node->str = strdup(str);
-	new_node->len = len;
-	new_node->next = (*head);
-	(*head) = new_node;
-	free(new_node->str);
-	free(new_node);
-	return ((*head));
+	new_node->len = len1;
+	new_node->next = *head;
+	*head = new_node;
+	return (*head);
 }
