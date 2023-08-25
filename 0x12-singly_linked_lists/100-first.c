@@ -1,9 +1,10 @@
-#include "list.h"
+#include <stdio.h>
 
 void first(void) __attribute__ ((constructor));
 
 /**
- * first - prints before main function
+ * first - prints before the main func.
+ * function is executed
  */
 void first(void)
 {
