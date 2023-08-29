@@ -8,17 +8,20 @@
 */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {unsigned int i = 0;
-	listint_t *node, *itrator = *head;
+	listint_t *node, *itrator;
 
+	if (head == NULL)
+		return (NULL);
+	itrator = *head;
 	node = malloc(sizeof(listint_t));
 	if (node == NULL)
 		return (NULL);
 	if (idx == 0)
 	{
 		node->n = n;
-		node->next = itrator;
-		itrator = node;
-		return (node);
+		node->next = *head;
+		*head = node;
+		return (*head);
 	}
 	while (itrator != NULL)
 	{
@@ -27,11 +30,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			node->n = n;
 			node->next = itrator->next;
 			itrator->next = node;
+			return (node);
 		}
 		i++;
 		itrator = itrator->next;
 	}
-	if (!itrator)
-		return (NULL);
-	return (node);
+	return (NULL);
 }
