@@ -1,4 +1,4 @@
-#incude "main.h"
+#include "main.h"
 /**
  * print_binary - it print the num in pinary
  * @n: long int with 8 bytes ->(64bit) will be shifted.
@@ -20,5 +20,5 @@ void print_binary(unsigned long int n)
 			_putchar('0');
 	}
 	if (count == 0)
-		_putchar('0);
+		_putchar('0');
 }
