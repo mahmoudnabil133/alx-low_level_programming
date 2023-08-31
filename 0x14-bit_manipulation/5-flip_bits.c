@@ -7,14 +7,14 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {unsigned int count = 0;
-	int i = 64;
-	unsigned long int current ,Xor = n ^ m;
+		int i = 64;
+		unsigned long int current, Xor = n ^ m;
+
 	while (i--)
 	{
 		current = Xor >> i;
 		if (current & 1)
-		       count ++;
+			count++;
 	}
-	return (count);
-}	
-
+		return (count);
+}
