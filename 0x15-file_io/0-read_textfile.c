@@ -18,8 +18,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	buf = malloc(sizeof(char) * letters);
 	r = read(fd, buf, letters);
-	printf("%s", buf);
+	w = write(1, buf, r);
 	free(buf);
 	close(fd);
-	return (r);
+	return (w);
 }
