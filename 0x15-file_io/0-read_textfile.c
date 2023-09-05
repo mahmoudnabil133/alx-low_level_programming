@@ -6,7 +6,7 @@
  * Return: num of letters.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
-{ssize_t sum;
+{ssize_t r;
 	int fd;
 	char *buf;
 
@@ -17,7 +17,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	buf = malloc(sizeof(char) * letters);
-	sum = read(fd, buf, letters);
+	r = read(fd, buf, letters);
 	printf("%s", buf);
-	return (sum);
+	free(buf);
+	close(fd);
+	return (r);
 }
