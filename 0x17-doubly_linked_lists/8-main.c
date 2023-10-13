@@ -11,6 +11,7 @@
 int main(void)
 {
     dlistint_t *head;
+    int x = 0;
 
     head = NULL;
     add_dnodeint_end(&head, 0);
@@ -23,7 +24,11 @@ int main(void)
     add_dnodeint_end(&head, 1024);
     print_dlistint(head);
     printf("-----------------\n");
-    delete_dnodeint_at_index(&head, 5);
+    x = delete_dnodeint_at_index(&head, 8);
+    print_dlistint(head);
+    printf("ret: %d\n", x);
+    printf("-----------------\n");
+    delete_dnodeint_at_index(&head, 0);
     print_dlistint(head);
     printf("-----------------\n");
     delete_dnodeint_at_index(&head, 0);
@@ -42,27 +47,25 @@ int main(void)
     print_dlistint(head);
     printf("-----------------\n");
     delete_dnodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_dnodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_dnodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_dnodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_dnodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_dnodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_dnodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_dnodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    delete_dnodeint_at_index(&head, 0);
+    printf("-----------------\n");
+    x = delete_dnodeint_at_index(&head, 0);
     print_dlistint(head);
-    printf("-----------------\n");
-    delete_dnodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_dnodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_dnodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_dnodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_dnodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_dnodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_dnodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_dnodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_dnodeint_at_index(&head, 0);
-    printf("-----------------\n");
-    delete_dnodeint_at_index(&head, 0);
-    print_dlistint(head);
+    printf("ret: %d\n", x);
     return (0);
 }
