@@ -6,15 +6,17 @@
  * Return: add of node .
 */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
-{dlistint_t *itr = head;
-
+{unsigned int i = 0;
 	if (!head)
 		return (NULL);
 	if (index == 0)
-		return (itr);
-	while (index--)
-		itr = itr->next;
-	if (itr)
-		return (itr);
+		return (head);
+	while (head)
+	{
+		i++;
+		head = head->next;
+		if (i == index)
+			return (head);
+	}
 	return (NULL);
 }
