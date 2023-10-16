@@ -9,5 +9,6 @@
 int main(void)
 {
 	printf("%d\n", _strlen("My Dyn Lib"));
+	printf("2+4 :%d\n", add(2, 4));
 	return (0);
 }
