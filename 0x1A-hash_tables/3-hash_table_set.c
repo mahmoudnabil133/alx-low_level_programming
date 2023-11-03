@@ -19,12 +19,11 @@ void free_node(hash_node_t *node)
  * Return: int
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
-{
-	if (!ht || !key || strcmp(key, "") == 0)
-		return (0);
-	hash_node_t *node, *current;
+{hash_node_t *node, *current;
 	unsigned long int index;
 
+	if (!ht || !key || strcmp(key, "") == 0)
+		return (0);
 	node = malloc(sizeof(hash_node_t));
 	if (!node)
 		return (0);
