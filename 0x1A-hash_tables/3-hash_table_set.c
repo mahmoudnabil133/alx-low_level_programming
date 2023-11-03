@@ -46,7 +46,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		while (current->next && strcmp(current->next->key, key))
 			current = current->next;
-		if (strcmp(current->next->key, key) == 0)
+		if (strcmp(current>key, key) == 0)
 		{
 			node->next = current->next->next;
 			current->next = node;
